@@ -1,0 +1,109 @@
+.garaje {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+/* Texto pequeño en mayúsculas encima del título */
+.garaje-antetitulo {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.garaje-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.garaje-titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 48px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.garaje-subtitulo {
+  max-width: 620px;
+  font-size: 18px;
+  color: var(--color-texto-suave);
+}
+
+.garaje-boton {
+  height: 48px;
+  flex-shrink: 0;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Título "Tus vehículos" y el contador */
+.garaje-seccion {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 20px;
+}
+
+.garaje-seccion-titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.garaje-contador {
+  font-size: 15px;
+  color: var(--color-texto-suave);
+}
+
+/* Tarjeta que se muestra cuando no hay vehículos */
+.garaje-vacio {
+  background-color: var(--color-blanco);
+  border: 1px dashed var(--color-borde);
+  border-radius: 16px;
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.garaje-vacio-icono {
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 16px;
+  border-radius: 12px;
+  background-color: var(--color-verde-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.garaje-vacio-titulo {
+  font-family: var(--fuente-titulo);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.garaje-vacio-texto {
+  max-width: 400px;
+  margin: 0 auto;
+  color: var(--color-texto-suave);
+}
+
+/* En móvil el botón va debajo del texto y ocupa todo el ancho */
+@media (max-width: 768px) {
+  .garaje {
+    padding: 32px 16px;
+  }
+
+  .garaje-cabecera {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .garaje-titulo {
+    font-size: 38px;
+  }
+}

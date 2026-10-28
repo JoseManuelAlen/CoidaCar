@@ -1,0 +1,77 @@
+.formulario {
+  background-color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-titulo {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 36px;
+}
+
+.formulario-etiqueta {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.formulario-input {
+  height: 44px;
+  padding: 0 12px;
+  margin-bottom: 18px;
+  border: 1px solid var(--color-borde);
+  border-radius: 8px;
+  background-color: var(--color-input);
+  font-family: var(--fuente-texto);
+  font-size: 15px;
+}
+
+.formulario-input:focus {
+  outline: 2px solid var(--color-verde);
+}
+
+/* Fila con dos campos uno al lado del otro (ej. Nombre y Apellidos) */
+.formulario-fila {
+  display: flex;
+  gap: 16px;
+}
+
+.formulario-campo {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.formulario-texto {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-texto-suave);
+  margin-top: 18px;
+}
+
+.formulario-enlace {
+  color: var(--color-verde);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.formulario-enlace:hover {
+  text-decoration: underline;
+}
+
+/* Mensaje de error (ej. usuario o contraseña incorrectos) */
+.formulario-error {
+  color: var(--color-error);
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.formulario .boton-principal {
+  margin-top: 4px;
+}
