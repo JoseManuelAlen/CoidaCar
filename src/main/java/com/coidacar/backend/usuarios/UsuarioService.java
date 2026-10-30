@@ -18,4 +18,19 @@ public class UsuarioService {
                 .map(UsuarioResponse::from)
                 .toList();
     }
+
+    @Transactional
+    public UsuarioResponse alta(AltaUsuarioRequest request) {
+        String email = request.email().trim().toLowerCase();
+        if (usuarioRepository.existsByEmailIgnoreCase(email)) {
+            throw new EmailYaRegistradoException(email);
+        }
+
+        Usuario usuario = new Usuario();
+        usuario.setNombre(request.nombre().trim());
+        usuario.setApellidos(request.apellidos() != null ? request.apellidos().trim() : null);
+        usuario.setEmail(email);
+
+        return UsuarioResponse.from(usuarioRepository.save(usuario));
+    }
 }
